@@ -61,6 +61,10 @@ By orchestrating **FFmpeg** for audio extraction and containerized AI models (**
           ▼
  [ Podman: Qwen 2.5 API ]      ──▶  Summary & Action Items
 
+```
+
+---
+
 ## 📋 Prerequisites
 
 Before running WriteHear, ensure the following tools are installed on your Linux system:
@@ -81,6 +85,7 @@ Used to run the containerized Whisper and LLM backends:
 Requires Rust 1.85+ (Rust 2024 edition):
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 ## 🚀 Installation & Running
 
