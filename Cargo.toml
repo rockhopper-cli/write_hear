@@ -1,0 +1,36 @@
+[package]
+name = "writehear"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Offline Audio Transcriber (subtitle creation, transcription and summary)"
+
+[package.metadata.generate-rpm]
+assets = [
+    # 1. The binary executable
+    { source = "target/release/writehear", dest = "/usr/bin/writehear", mode = "755" },
+
+    # 2. Desktop launcher entry
+    { source = "assets/writehear.desktop", dest = "/usr/share/applications/writehear.desktop", mode = "644" },
+
+    # 3. Application icon (installed to pixmaps for universal resolution support)
+    { source = "assets/logo.png", dest = "/usr/share/pixmaps/writehear.png", mode = "644" },
+    
+    # 4. Also install to hicolor icons (standard theme path)
+    { source = "assets/logo.png", dest = "/usr/share/icons/hicolor/256x256/apps/writehear.png", mode = "644" },
+]
+
+[package.metadata.generate-rpm.requires]
+ffmpeg = "*"
+
+[dependencies]
+anyhow = "1.0.104"
+dirs = "7.0.0"
+eframe = "0.36.2"
+reqwest = { version = "0.13.5", features = ["json", "multipart", "blocking"] }
+rfd = "0.17.2"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+tempfile = "3.27.0"
+tokio = { version = "1.53.1", features = ["rt-multi-thread", "macros"] }
+toml = "1.1.6"

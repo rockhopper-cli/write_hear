@@ -1,0 +1,33 @@
+.
+├── assets
+│   ├── InclusiveSans-VariableFont_wght.ttf
+│   └── logo.png
+├── Cargo.lock
+├── Cargo.toml
+├── scripts
+├── src
+│   ├── app.rs
+│   ├── audio
+│   │   ├── ffmpeg.rs
+│   │   ├── mod.rs
+│   │   └── transcriber.rs
+│   ├── audio_pipeline.rs
+│   ├── main.rs
+│   ├── podman
+│   │   ├── client.rs
+│   │   ├── llm_client.rs
+│   │   └── mod.rs
+│   ├── subtitle_pipeline.rs
+│   ├── subtitles
+│   │   ├── formatter.rs
+│   │   └── mod.rs
+│   └── ui
+│       ├── config.rs
+│       ├── meeting_notes.rs
+│       ├── mod.rs
+│       ├── setup_model.rs
+│       ├── subtitle_creator.rs
+│       └── transcription.rs
+└── structure.txt
+
+8 directories, 23 files
